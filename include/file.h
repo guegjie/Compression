@@ -5,11 +5,10 @@
 #include <string>
 
 
-using namespace std;
 class FileManager {
 public:
-    vector<uint8_t> readFile(const string& filePath) const;
-    void writeFile(const string& filePath, const vector<uint8_t>& contents) const;
+    std::vector<uint8_t> readFile(const std::string& filePath) const;
+    void writeFile(const std::string& filePath, const std::vector<uint8_t>& contents) const;
 };
 
 #endif

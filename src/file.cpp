@@ -8,7 +8,7 @@ using namespace std;
 vector<uint8_t> FileManager::readFile(const string& filePath) const {
     ifstream inFile(filePath, ios::binary);
     if (!inFile.is_open()) {
-        throw runtime_error("File already open: " + filePath);
+        throw runtime_error("File cannont be opened: " + filePath);
     }
 
     inFile.seekg(0, ios::end);
@@ -27,7 +27,7 @@ vector<uint8_t> FileManager::readFile(const string& filePath) const {
 void FileManager::writeFile(const string& filePath, const vector<uint8_t>& contents) const {
     ofstream outFile(filePath, ios::binary);
     if (!outFile.is_open()) {
-        throw runtime_error("File already open: " + filePath);
+        throw runtime_error("File cannot be opened: " + filePath);
     }
     outFile.write(reinterpret_cast<const char*>(contents.data()), contents.size());
     outFile.close();

@@ -3,6 +3,8 @@
 #include <stdexcept>
 #include "test.h"
 #include "standardRLE.h"
+#include "packBitRLE.h"
+#include "LZMA.h"
 
 
 
@@ -10,6 +12,8 @@ using namespace std;
 Compression* createCompression(const string& type){
     if(type == "test") return new TestCompression();
     if(type == "rle") return new RLECompression();
+    if(type == "rlep") return new RLEPCompression();
+    if(type == "lzma") return new LZMACompression();
 
     throw invalid_argument("Unknown compression algorithm: " + type);
 }

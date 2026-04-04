@@ -3,12 +3,11 @@
 
 #include <string>
 
-using namespace std;
 
 class Compression {
 public:
-    virtual void compress(const string& inputFile, const string& outputFile) = 0;
-    virtual void decompress(const string& inputFile, const string& outputFile) = 0;
+    virtual void compress(const std::string& inputFile, const std::string& outputFile) = 0;
+    virtual void decompress(const std::string& inputFile, const std::string& outputFile) = 0;
     virtual ~Compression() = default;
 };
 
