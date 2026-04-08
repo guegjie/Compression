@@ -5,6 +5,7 @@
 #include "standardRLE.h"
 #include "packBitRLE.h"
 #include "LZMA.h"
+#include "LZ77.h"
 
 
 
@@ -13,6 +14,7 @@ Compression* createCompression(const string& type){
     if(type == "test") return new TestCompression();
     if(type == "rle") return new RLECompression();
     if(type == "rlep") return new RLEPCompression();
+    if(type == "lz77") return new LZ77Compression();
     if(type == "lzma") return new LZMACompression();
 
     throw invalid_argument("Unknown compression algorithm: " + type);

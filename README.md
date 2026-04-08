@@ -2,9 +2,10 @@
 
 This is a compression tool that implements a few popular compression algorithms. Right now it includes:
 
-- Test(copy)
+- bit level copy(test)
 - run-length encoding in pairs(rle)
 - run-length encoding packBits(rlep) x
+- LZ77(lz77)
 - Lempel–Ziv–Markov chain algorithm(lzma) x
 
 x - planned but not included
