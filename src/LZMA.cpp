@@ -5,29 +5,6 @@
 
 
 using namespace std;
-struct LZPointer{
-    uint8_t offset;
-    uint8_t length;
-};
-
-LZPointer findLongestMatch(const vector<uint8_t>& data, size_t pos) {
-    LZPointer bestMatch = {0, 0};
-    for (size_t offset = 1; offset <= 255 && pos >= offset; ++offset) {
-        size_t length = 0;
-        while (length < 255 && pos + length < data.size() && data[pos - offset + length] == data[pos + length]) {
-            ++length;
-        }
-        if (length > bestMatch.length) {
-            bestMatch = LZPointer{(uint8_t)offset, (uint8_t)length};
-        }
-    }
-    if (bestMatch.length < 3) {
-        return {0, 0};
-    }   
-    return bestMatch;
-}
-
-
 void LZMACompression::compress(const string& inputFile, const string& outputFile) {
     vector<uint8_t> inputData = fileManager.readFile(inputFile);
     vector<uint8_t> outputData;
