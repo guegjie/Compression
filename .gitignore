@@ -1,0 +1,12 @@
+#vscode
+.vscode/
+
+
+#compile outputs
+*.exe
+*.o
+*.obj
+
+#temporary tests
+compressed.txt
+testTmp/
