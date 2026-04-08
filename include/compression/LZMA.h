@@ -1,7 +1,7 @@
 #ifndef LZMA_H
 #define LZMA_H
-#include "compression.h"
-#include "file.h"
+#include "compression/compression.h"
+#include "core/file.h"
 #include <string>
 
 

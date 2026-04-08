@@ -1,11 +1,11 @@
 #include <iostream>
 #include <string>
 #include <stdexcept>
-#include "test.h"
-#include "standardRLE.h"
-#include "packBitRLE.h"
-#include "LZMA.h"
-#include "LZ77.h"
+#include "compression/test.h"
+#include "compression/standardRLE.h"
+#include "compression/packBitRLE.h"
+#include "compression/LZMA.h"
+#include "compression/LZ77.h"
 
 
 

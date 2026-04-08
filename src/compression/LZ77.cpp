@@ -1,4 +1,4 @@
-#include "LZ77.h"
+#include "compression/LZ77.h"
 #include <cstddef>
 #include <cstdint>
 #include <vector>

@@ -2,11 +2,11 @@
 #include <filesystem>
 #include <iostream>
 #include <vector>
-#include "file.h"
-#include "compression.h"
-#include "test.h"
-#include "standardRLE.h"
-#include "packBitRLE.h"
+#include "core/file.h"
+#include "compression/compression.h"
+#include "compression/test.h"
+#include "compression/standardRLE.h"
+#include "compression/packBitRLE.h"
 
 using namespace std;
 void compressDecompress(Compression& comp, const string& name, const vector<uint8_t>& input) {

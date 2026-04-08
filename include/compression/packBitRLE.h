@@ -1,7 +1,7 @@
 #ifndef PACK_BIT_RLE_H
 #define PACK_BIT_RLE_H
-#include "compression.h"
-#include "file.h"
+#include "compression/compression.h"
+#include "core/file.h"
 #include <string>
 
 

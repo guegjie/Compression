@@ -1,5 +1,5 @@
-#include "RangeEncoder.h"
-#include "file.h"
+#include "core/RangeEncoder.h"
+#include "core/file.h"
 
 #include <cstdint>
 #include <iomanip>
